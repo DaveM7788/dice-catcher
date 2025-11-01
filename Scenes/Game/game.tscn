@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b050o7xgpvpiy"]
+
+[ext_resource type="Texture2D" uid="uid://bp54f41nexc" path="res://Assets/GemBg.png" id="1_mv0hc"]
+[ext_resource type="PackedScene" uid="uid://cby2mqaa86h7s" path="res://Scenes/Dice/dice.tscn" id="2_qxfds"]
+
+[node name="Game" type="Node2D"]
+
+[node name="GemBg" type="Sprite2D" parent="."]
+position = Vector2(578.00006, 282.00003)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_mv0hc")
+
+[node name="Dice" parent="." instance=ExtResource("2_qxfds")]
