@@ -10,12 +10,21 @@ signal point_scored
 @onready var sounds: AudioStreamPlayer2D = $Sounds
 
 
+# movement still seems just a bit off. regardless of _process or _physics_process
+# physics interpolation checkbox helps a decent amount but still not perfect
+
+# if you run from editor, it looks way better, but running from project manager
+# seems to pronounce the issue
 func _physics_process(delta: float) -> void:
-	var move: float = Input.get_axis("ui_left", "ui_right")
-	position.x += move * speed * delta
+	var moveH: float = Input.get_axis("ui_left", "ui_right")
+	position.x += moveH * speed * delta
 	
-	if !is_zero_approx(move):
-		sprite_2d.flip_h = move > 0.0
+	# optional vertical axis movement too. not normalized
+	var moveV: float = Input.get_axis("ui_up", "ui_down")
+	position.y += moveV * speed * delta
+	
+	if !is_zero_approx(moveH):
+		sprite_2d.flip_h = moveH > 0.0
 
 
 func _on_area_entered(area: Area2D) -> void:

@@ -6,7 +6,7 @@ signal game_over
 
 @onready var dice_sprite: Sprite2D = $Sprite2D
 const ROT_SPEED: float = 3.0
-const FALL_SPEED: float = 120.0
+const FALL_SPEED: float = 140.0
 
 var rot_dir: float = 1.0
 
