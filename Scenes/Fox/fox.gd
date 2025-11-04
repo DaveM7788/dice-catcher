@@ -4,7 +4,7 @@ class_name Fox
 
 signal point_scored
 
-@export var speed: float = 500.0
+@export var speed: float = 700.0
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var sounds: AudioStreamPlayer2D = $Sounds
@@ -12,6 +12,7 @@ signal point_scored
 
 # movement still seems just a bit off. regardless of _process or _physics_process
 # physics interpolation checkbox helps a decent amount but still not perfect
+# actually turn off vsync for mac and that seems to do it
 
 # if you run from editor, it looks way better, but running from project manager
 # seems to pronounce the issue
