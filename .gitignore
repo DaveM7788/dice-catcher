@@ -3,3 +3,7 @@
 /android/
 
 DiceCatcher.dmg
+
+/.vscode
+/.lsp
+/.clj-kondo

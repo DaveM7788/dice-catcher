@@ -16,6 +16,12 @@ signal point_scored
 
 # if you run from editor, it looks way better, but running from project manager
 # seems to pronounce the issue
+
+# SOLUTION for cleanliness (no jitter, little to no laptop heat)
+# 1. canvas items
+# 2. use compatability render (OpenGL)
+# 3. set max fps (60-90)
+# 4. turn off vsync for macOS
 func _physics_process(delta: float) -> void:
 	var moveH: float = Input.get_axis("ui_left", "ui_right")
 	position.x += moveH * speed * delta
